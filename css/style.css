@@ -89,6 +89,16 @@ p {
   transform: scale(1.1);
 }
 
+.menuBar {
+  display: none;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 5%;
+  left: 15px;
+  z-index: 1100;
+}
+
 /*Top Bar*/
 .topBar {
   background: var(--secondary);
@@ -840,5 +850,127 @@ footer i {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1034px) {
+  .hero-img {
+    right: -100px;
+    top: 80px;
+  }
+}
+
+@media screen and (max-width: 874px) {
+  .nav,
+  .topBar {
+    display: none;
+  }
+
+  .menuBar {
+    display: block;
+  }
+
+  .hero-img {
+    right: -100px;
+    top: 80px;
+  }
+}
+
+@media screen and (max-width: 714px) {
+  .hero-img {
+    right: -120px;
+    top: 120px;
+  }
+
+  .about-meal-wrap,
+  .services .card-wrap {
+    display: block;
+  }
+
+  .about-meal-wrap > div {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .card-wrap {
+    margin-right: 0;
+  }
+
+  .service-card {
+    margin-right: 0;
+    margin-bottom: 8rem;
+  }
+
+  .services .magic-shadow-sm::after {
+    bottom: -0.2rem;
+  }
+
+  .article-wrapper {
+    display: block;
+    margin-right: 0;
+  }
+
+  .article {
+    margin-right: 0;
+    margin-bottom: 5rem;
+  }
+
+  .whole-wrap {
+    display: block;
+  }
+
+  .sub-wrapper {
+    display: block;
+    text-align: center;
+  }
+
+  .subscribe .sub-image img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 498px) {
+  .hero-img {
+    right: -200px;
+  }
+
+  .deals .timer {
+    margin-right: 0;
+  }
+
+  .deals .timer div {
+    margin-right: 0.5rem;
+  }
+
+  .footer-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer-wrapper div {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .hero-img {
+    display: none;
+  }
+
+  .welcome {
+    justify-content: center;
+  }
+
+  .hero h1,
+  .hero p {
+    text-align: center;
+  }
+
+  .hero p {
+    width: 100%;
+  }
+
+  .hero-btns {
+    text-align: center;
+    margin-top: 3rem;
   }
 }

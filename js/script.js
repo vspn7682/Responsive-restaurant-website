@@ -4,7 +4,21 @@ $(document).ready(function () {
         slidesToShow: 3,
         slidesToScroll: 1,
         prevArrow: '.prev',
-        nextArrow: '.next'
+        nextArrow: '.next',
+        responsive: [
+            {
+                breakpoint: 874,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 714,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     })
 })
 
