@@ -23,29 +23,20 @@ $(document).ready(function () {
 })
 
 
-const toTop = document.querySelector('#toTop');
-const mainNav = document.querySelector('.mainNav');
+const menuBar = document.querySelector('.menuBar');
+const siteWrapper = document.querySelector('.site-content-wrapper');
+const navBg = document.querySelector('.nav-bg');
+const siteContent = document.querySelector('.site-content');
+const main = document.querySelector('.main');
+const mobNavigation = document.querySelector('.mobNavigation');
 
-window.addEventListener('scroll', () => {
-    if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
-        toTop.classList.add('topShow');
-    } else {
-        toTop.classList.remove('topShow');
-    }
-
-})
-
-toTop.addEventListener('click', (e) => {
+menuBar.addEventListener('click', (e) => {
     e.preventDefault();
-    window.scrollTo(0, 0);
+    siteWrapper.classList.toggle('navigate');
+    main.classList.toggle('overflow');
+    siteContent.classList.toggle('overflow-y');
 })
 
-window.addEventListener('scroll', () => {
-    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-        mainNav.classList.add('fixed');
-        mainNav.classList.remove('magic-shadow');
-    } else {
-        mainNav.classList.remove('fixed');
-        mainNav.classList.add('magic-shadow');
-    }
+mobNavigation.addEventListener('click', () => {
+    siteWrapper.classList.remove('navigate');
 })

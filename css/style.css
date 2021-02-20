@@ -89,14 +89,110 @@ p {
   transform: scale(1.1);
 }
 
+/*Mobile Navigation*/
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.main.overflow {
+  overflow: hidden;
+}
+
+.nav-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--light);
+  z-index: 0;
+  padding: 0;
+}
+
+.nav-bg .mobNav-wrapper {
+  padding: 2rem 1.5rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobLogo,
+.mobCart,
+.mobNavigation {
+  margin-bottom: 3rem;
+}
+
+.mobCart img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1.2rem;
+}
+
+.mobCart p {
+  font-size: 1.6rem;
+  font-family: "Raleway-Bold";
+}
+
+.mobNavigation a {
+  font-size: 1.6rem;
+  color: var(--secondary);
+  font-family: "Raleway-Medium";
+  padding-bottom: 1.5rem;
+}
+
+div.mobContact {
+  margin-bottom: 2rem;
+}
+
+.mobContact span,
+.mobTime span {
+  font-size: 1.6rem;
+  font-family: "Raleway-Bold";
+  color: var(--secondary);
+  padding-left: 2rem;
+}
+
+.mobContact .small,
+.mobTime .small {
+  font-size: 1.2rem !important;
+  margin-top: 0.5rem;
+}
+
+.site-content-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: var(--heaven);
+  transition: 0.3s all;
+  z-index: 1;
+}
+
+.site-content {
+  width: 100%;
+  height: 100%;
+}
+
+.site-content.overflow-y {
+  overflow-y: auto;
+}
+
+.site-content-wrapper.navigate {
+  transform: translateX(80%) scale(0.9);
+  border-radius: 0.4rem;
+  box-shadow: 0 0 10px 1px var(--secondary);
+}
+
 .menuBar {
   display: none;
   width: 30px;
   height: 30px;
-  position: fixed;
-  top: 5%;
+  position: absolute;
+  top: 4rem;
   left: 15px;
   z-index: 1100;
+  cursor: pointer;
 }
 
 /*Top Bar*/
@@ -876,6 +972,12 @@ footer i {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .hero-img {
+    right: -200px;
+  }
+}
+
 @media screen and (max-width: 714px) {
   .hero-img {
     right: -120px;
@@ -892,11 +994,11 @@ footer i {
     margin-bottom: 2rem;
   }
 
-  .card-wrap {
+  .services .card-wrap {
     margin-right: 0;
   }
 
-  .service-card {
+  .services .service-card {
     margin-right: 0;
     margin-bottom: 8rem;
   }
